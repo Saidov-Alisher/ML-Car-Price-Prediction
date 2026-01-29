@@ -1,0 +1,320 @@
+11.1s 1 /kaggle/input/sf-dst-car-price/sample_submission.csv
+11.1s 2 /kaggle/input/sf-dst-car-price/test.csv
+11.1s 3 /kaggle/input/parsing-all-moscow-auto-ru-09-09-2020/all_auto_ru_09_09_2020.csv
+22.9s 4 Размерность тренировочного датасета:  (89378, 26)
+22.9s 5 Размерность тестового датасета:  (3837, 23)
+22.9s 6 Размерность датасета c примером сабмишена:  (3837, 2)
+24.1s 7 Резюме:
+24.1s 8 1. Не совпали типы в:= 11 столбцах
+24.1s 9 
+24.1s 10 2. Уникальные значения заоблачно различаются в:= 10 столбцах [0, 1, 4, 5, 7, 8, 10, 11, 12, 13]
+25.1s 11 Резюме:
+25.1s 12 1. Не совпали типы в:= 5 столбцах
+25.1s 13 
+25.1s 14 2. Уникальные значения заоблачно различаются в:= 10 столбцах [0, 1, 4, 5, 7, 8, 10, 11, 12, 13]
+25.9s 15 в столбце:= bodyType в трейне НЕ НАЙДЕНО:= 0 уникальных значений из теста
+25.9s 16 в столбце:= color в трейне НЕ НАЙДЕНО:= 0 уникальных значений из теста
+25.9s 17 в столбце:= Руль в трейне НЕ НАЙДЕНО:= 0 уникальных значений из теста
+25.9s 18 в столбце:= ПТС в трейне НЕ НАЙДЕНО:= 0 уникальных значений из теста
+25.9s 19 в столбце:= Владельцы в трейне НЕ НАЙДЕНО:= 0 уникальных значений из теста
+25.9s 20 в столбце:= Владение в трейне НЕ НАЙДЕНО:= 157 уникальных значений из теста
+90.8s 21 
+98.9s 22 
+105.2s 23 
+105.8s 24 
+108.4s 25 
+108.4s 26 
+108.5s 27 
+117.3s 28 
+126.0s 29 Кол-во столбцов, для дальнейшей работы после предварительного анализа:= 26
+127.1s 30 Кол-во строк в трейне:=  85481
+129.7s 31 Всего в тесте типов кузова:= 11
+129.7s 32 Всего в трейне типов кузова:= 144
+130.3s 33 Список 11 типов кузова БМВ из теста:= ['седан' 'внедорожник 5 дв.' 'хэтчбек 3 дв.' 'хэтчбек 5 дв.' 'купе'
+130.3s 34 'родстер' 'лифтбек' 'универсал 5 дв.' 'кабриолет' 'седан 2 дв.'
+130.3s 35 'компактвэн']
+130.3s 36 Список первых 20 из 144 типов кузова из трейна:= ['седан' 'универсал 5 дв.' 'хэтчбек 5 дв. sportback' 'хэтчбек 3 дв.'
+130.3s 37 'хэтчбек 5 дв.' 'кабриолет' 'купе' 'лифтбек sportback' 'лифтбек'
+130.3s 38 'седан long' 'внедорожник 5 дв.' 'кабриолет roadster' 'седан 2 дв.'
+130.3s 39 'седан gran coupe' 'компактвэн' 'компактвэн gran tourer'
+130.3s 40 'лифтбек gran turismo' 'хэтчбек 3 дв. compact' 'лифтбек gran coupe'
+130.3s 41 'купе-хардтоп']
+132.3s 42 В результате после EDA признака:= bodyType, обработано признаков:= 1, осталось:= 22
+132.3s 43 Кол-во строк в трейне:=  79193 . Убрали на данном шаге:=  6288
+132.3s 44 Кол-во строк в тесте:=  3837
+142.1s 45 В результате после EDA признака:= enginePower, обработано признаков:= 2, осталось:= 21
+142.1s 46 Кол-во строк в трейне:=  73548 . Убрали на данном шаге:=  5645
+142.1s 47 Кол-во строк в тесте:=  3837
+143.4s 48 Всего в датасета марок:= 36
+145.3s 49 Список релевантных брендов:  AUDI CADILLAC CHRYSLER LEXUS MERCEDES VOLVO
+146.6s 50 Список релевантных брендов:  AUDI CADILLAC INFINITI JAGUAR JEEP LAND_ROVER LEXUS MERCEDES VOLVO
+147.7s 51 Список релевантных брендов:  AUDI HONDA MINI RENAULT TOYOTA VOLKSWAGEN VOLVO
+149.3s 52 Список релевантных брендов:  INFINITI MAZDA MINI SUZUKI TOYOTA VOLKSWAGEN VOLVO
+150.4s 53 Список релевантных брендов:  AUDI FORD MERCEDES NISSAN TOYOTA
+151.4s 54 Список релевантных брендов:  MAZDA MERCEDES PORSCHE
+152.6s 55 Список релевантных брендов:  AUDI HONDA MERCEDES SUBARU TOYOTA VOLKSWAGEN VOLVO
+153.7s 56 Список релевантных брендов:  AUDI CHRYSLER LEXUS MERCEDES VOLVO
+154.8s 57 Список релевантных брендов:  VOLKSWAGEN
+155.5s 58 Список релевантных брендов авто:
+155.5s 59 FORD RENAULT AUDI MINI JEEP SUBARU NISSAN CADILLAC JAGUAR LAND_ROVER CHRYSLER SUZUKI TOYOTA VOLVO MERCEDES PORSCHE INFINITI VOLKSWAGEN MAZDA LEXUS HONDA
+155.5s 60 , их кол-во:= 21 из 36
+155.5s 61 
+156.2s 62 В трейне не оказалось авто БМВ с типом кузова:= лифтбек
+156.2s 63 Список брендов авто с типом кузова лифтбек := AUDI CHERY CITROEN FORD KIA MAZDA OPEL RENAULT SKODA TOYOTA VOLKSWAGEN MERCEDES
+157.5s 64 В трейне не оказалось авто БМВ с типом кузова:= седан 2 дв.
+157.5s 65 Список брендов авто с типом кузова седан 2 дв. := BMW
+160.9s 66 В результате после EDA признака:= brand, обработано признаков:= 3, осталось:= 20
+160.9s 67 Кол-во строк в трейне:=  48715 . Убрали на данном шаге:=  24833
+160.9s 68 Кол-во строк в тесте:=  3837
+162.3s 69 Список зачений по fuelType в трейне:= ['бензин', 'дизель', 'электро', 'гибрид', 'газ']
+162.3s 70 Список зачений по fuelType в тесте:= ['дизель', 'бензин', 'гибрид', 'электро']
+163.7s 71 Распределение по кол-ву зачений по fuelType в трейне:=
+163.7s 72 бензин     39906
+163.7s 73 дизель      8571
+163.7s 74 гибрид       160
+163.7s 75 электро       68
+163.7s 76 газ           10
+163.7s 77 Name: fuelType, dtype: int64
+163.7s 78 Распределение по кол-ву зачений по fuelType в тесте:=
+163.7s 79 бензин     2471
+163.7s 80 дизель     1358
+163.7s 81 гибрид        7
+163.7s 82 электро       1
+163.7s 83 Name: fuelType, dtype: int64
+164.4s 84 Кол-во электрокаров BMW в трейне:= 7
+165.4s 85 Список релевантных брендов:  MERCEDES VOLKSWAGEN
+166.9s 86 В результате после EDA признака:= fuelType, обработано признаков:= 4, осталось:= 19
+166.9s 87 Кол-во строк в трейне:=  48705 . Убрали на данном шаге:=  10
+166.9s 88 Кол-во строк в тесте:=  3837
+176.9s 89 Кол-во авто с объемом двигателя более 6600 см3:= 9
+176.9s 90 Бренды авто с объемом двигателя более 6600 см3:= ['CADILLAC', 'CHRYSLER', 'FORD']
+181.2s 91 В результате после EDA признака:= engineDisplacement, обработано признаков:= 5, осталось:= 18
+181.2s 92 Кол-во строк в трейне:=  48694 . Убрали на данном шаге:=  11
+181.2s 93 Кол-во строк в тесте:=  3837
+186.7s 94 В результате после EDA признака:= numberOfDoors, обработано признаков:= 6, осталось:= 17
+186.7s 95 Кол-во строк в трейне:=  48694 . Убрали на данном шаге:=  0
+186.7s 96 Кол-во строк в тесте:=  3837
+196.7s 97 В результате после EDA признака:= mileage, обработано признаков:= 7, осталось:= 16
+196.7s 98 Кол-во строк в трейне:=  48248 . Убрали на данном шаге:=  446
+196.7s 99 Кол-во строк в тесте:=  3837
+211.6s 100 В результате после EDA признака:= Владельцы, обработано признаков:= 8, осталось:= 15
+211.6s 101 Кол-во строк в трейне:=  48248 . Убрали на данном шаге:=  0
+211.6s 102 Кол-во строк в тесте:=  3837
+225.6s 103 В результате после EDA признака:= price, обработано признаков:= 9, осталось:= 14
+225.6s 104 Кол-во строк в трейне:=  47775 . Убрали на данном шаге:=  473
+225.6s 105 Кол-во строк в тесте:=  3837
+236.8s 106 В результате после EDA признака:= modelDate, обработано признаков:= 10, осталось:= 13
+236.8s 107 Кол-во строк в трейне:=  46993 . Убрали на данном шаге:=  782
+236.8s 108 Кол-во строк в тесте:=  3837
+258.5s 109 В результате после EDA признака:= productionDate, обработано признаков:= 11, осталось:= 12
+258.5s 110 Кол-во строк в трейне:=  39376 . Убрали на данном шаге:=  7617
+258.5s 111 Кол-во строк в тесте:=  3837
+263.3s 112 В результате после EDA признака:= vehicleConfiguration, обработано признаков:= 12, осталось:= 11
+263.3s 113 Кол-во строк в трейне:=  39376 . Убрали на данном шаге:=  0
+263.3s 114 Кол-во строк в тесте:=  3837
+268.9s 115 В результате после EDA признака:= vehicleTransmission, обработано признаков:= 13, осталось:= 10
+268.9s 116 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  3575
+268.9s 117 Кол-во строк в тесте:=  3837
+272.9s 118 В результате после EDA признака:= Комплектация, обработано признаков:= 14, осталось:= 9
+272.9s 119 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+272.9s 120 Кол-во строк в тесте:=  3837
+284.0s 121 ['машина', 'в', 'приличном', 'состоянии', ',не', 'гнилая', 'не', 'ржавая', '.по', 'менины', 'этим', 'летом', 'коренные', 'и', 'шатунные', 'вкладыши', '.масло', 'не', 'ест', '.', 'цвет', 'черный', '.год', 'выпуска', '1991.двигатель', '2.8.привод', 'полный', 'кватро.все', 'стеклоподъемники', '.кожаный', 'салон', '.']===['машина', 'в', 'оригинале', 'не', 'гнилая', 'все', 'вопросы', 'по', 'телефону.', 'птс', 'оригинал,', 'двигатель', '1.8', '90', 'л/с,', 'карбюратор', 'родной', 'двигатель', 'масло', 'не', 'ест.']===['птс', 'оригинал!', 'полный', 'комплект', 'ключей!', 'по', 'результатам', 'комплексной', 'диагностики', 'автомобиля', 'серьезных', 'замечаний', 'не', 'выявлено.', 'комплектация:', '•', 'антиблокировочная', 'система', '•', 'антипробуксовочная', 'система', '•', 'система', 'курсовой', 'устойчивости', '•', 'блокировка', 'замков', 'задних', 'дверей', '•', 'сигнализация', '•', 'иммобилайзер', '•', 'центральный', 'замок', '•', 'усилитель', 'руля', '•', 'активный', 'усилитель', 'руля', '•', 'электропривод', 'зеркал', '•', 'аудиосистема', '•', 'аудиоподготовка', '•', 'розетка', '12v', 'более', '200', 'автомобилей', 'с', 'пробегом', 'в', 'наличии!', '-', 'выгода', 'до', '70', '000', 'рублей', 'за', 'трейд', 'ин', '-', 'выкуп', 'вашего', 'автомобиля', 'на', 'спец.', 'условиях', '-', 'выгода', 'до', '40', '000', 'рублей', 'при', 'покупке', 'в', 'кредит', '-', 'более', '10', 'банков', '–', 'партнеров', 'на', 'выбор', '-', 'комиссионная', 'продажа', 'вашего', 'автомобиля', 'на', 'ваших', 'условиях!', 'гк', 'автомир,', 'автомобили', 'с', 'пробегом', '-', 'это', 'ваш', 'надежный', 'партнер,', 'на', 'рынке', 'автомобилей', 'с', 'пробегом.', 'наша', 'компания', 'более', '20', 'лет', 'занимается', 'направлением', 'автомобилей', 'с', 'пробегом,', 'все', 'специалисты', 'имеют', 'огромный', 'и', 'продуктивный', 'опыт', 'в', 'автомобильном', 'бизнесе.', 'комплектация:', '•', 'антиблокировочная', 'система', '•', 'подушки', 'безопасности', 'водителя', '•', 'гидро', 'усилитель', 'руля', '•', 'электростеклоподъемники', 'передние', '•', 'cd', '•', 'тканевая', 'обивка', 'салона', '•', 'домкрат', '•', 'полноразмерное', 'запасное', 'колесо']
+286.9s 122 В результате после EDA признака:= description, обработано признаков:= 15, осталось:= 8
+286.9s 123 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+286.9s 124 Кол-во строк в тесте:=  3837
+291.7s 125 В результате после EDA признака:= Привод, обработано признаков:= 16, осталось:= 7
+291.7s 126 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+291.7s 127 Кол-во строк в тесте:=  3837
+295.6s 128 В результате после EDA признака:= Состояние, обработано признаков:= 17, осталось:= 6
+295.6s 129 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+295.6s 130 Кол-во строк в тесте:=  3837
+302.2s 131 В результате после EDA признака:= ПТС, обработано признаков:= 18, осталось:= 5
+302.2s 132 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+302.2s 133 Кол-во строк в тесте:=  3837
+316.4s 134 В результате после EDA признака:= Владение, обработано признаков:= 19, осталось:= 4
+316.4s 135 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+316.4s 136 Кол-во строк в тесте:=  3837
+321.4s 137 В результате после EDA признака:= name, обработано признаков:= 20, осталось:= 3
+321.4s 138 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+321.4s 139 Кол-во строк в тесте:=  3837
+324.8s 140 2.0 == 1ER
+324.8s 141 245.0 == M1
+324.8s 142 7.0 == 2ER
+324.8s 143 6.0 == 2ACTIVETOURER
+324.8s 144 13.0 == 3ER
+324.8s 145 15.0 == 4
+324.8s 146 20.0 == 5ER
+324.8s 147 23.0 == 6ER
+324.8s 148 27.0 == 7ER
+324.8s 149 30.0 == 8ER
+324.8s 150 209.0 == I3
+324.8s 151 210.0 == I8
+324.8s 152 246.0 == M2
+324.8s 153 247.0 == M3
+324.8s 154 248.0 == M4
+324.8s 155 249.0 == M5
+324.8s 156 250.0 == M6
+324.8s 157 410.0 == X1
+324.8s 158 411.0 == X2
+324.8s 159 412.0 == X3
+324.8s 160 413.0 == X4
+324.8s 161 414.0 == X5
+324.8s 162 415.0 == X5_M
+324.8s 163 416.0 == X6
+324.8s 164 417.0 == X6_M
+324.8s 165 418.0 == X7
+324.8s 166 439.0 == Z1
+324.8s 167 440.0 == Z3
+324.8s 168 441.0 == Z3M
+324.8s 169 442.0 == Z4
+326.8s 170 0:	learn: 1.2125625	total: 95ms	remaining: 4.66s
+326.8s 171 1:	learn: 1.4764947	total: 122ms	remaining: 2.92s
+326.8s 172 2:	learn: 1.0448103	total: 148ms	remaining: 2.32s
+326.8s 173 3:	learn: 0.5596550	total: 174ms	remaining: 2s
+326.8s 174 4:	learn: 0.3877922	total: 200ms	remaining: 1.8s
+326.8s 175 5:	learn: 0.3417192	total: 225ms	remaining: 1.65s
+326.8s 176 6:	learn: 0.3135431	total: 252ms	remaining: 1.55s
+326.8s 177 7:	learn: 0.2704794	total: 276ms	remaining: 1.45s
+327.0s 178 8:	learn: 0.2461714	total: 301ms	remaining: 1.37s
+327.0s 179 9:	learn: 0.2325654	total: 327ms	remaining: 1.31s
+327.0s 180 10:	learn: 0.2017442	total: 352ms	remaining: 1.25s
+327.0s 181 11:	learn: 0.1905056	total: 378ms	remaining: 1.2s
+327.0s 182 12:	learn: 0.1775517	total: 404ms	remaining: 1.15s
+327.0s 183 13:	learn: 0.1710551	total: 430ms	remaining: 1.1s
+327.0s 184 14:	learn: 0.1660887	total: 456ms	remaining: 1.06s
+327.0s 185 15:	learn: 0.1432457	total: 480ms	remaining: 1.02s
+327.2s 186 16:	learn: 0.1377974	total: 504ms	remaining: 979ms
+327.2s 187 17:	learn: 0.1353145	total: 529ms	remaining: 941ms
+327.2s 188 18:	learn: 0.1138905	total: 553ms	remaining: 902ms
+327.2s 189 19:	learn: 0.1104990	total: 577ms	remaining: 866ms
+327.2s 190 20:	learn: 0.1076969	total: 601ms	remaining: 829ms
+327.2s 191 21:	learn: 0.1008154	total: 625ms	remaining: 796ms
+327.2s 192 22:	learn: 0.0977356	total: 649ms	remaining: 761ms
+327.2s 193 23:	learn: 0.0909226	total: 672ms	remaining: 728ms
+327.2s 194 24:	learn: 0.0893348	total: 696ms	remaining: 696ms
+327.4s 195 25:	learn: 0.0865987	total: 722ms	remaining: 666ms
+327.4s 196 26:	learn: 0.0843744	total: 746ms	remaining: 635ms
+327.4s 197 27:	learn: 0.0814925	total: 770ms	remaining: 605ms
+327.4s 198 28:	learn: 0.0806200	total: 788ms	remaining: 571ms
+327.4s 199 29:	learn: 0.0791341	total: 812ms	remaining: 541ms
+327.4s 200 30:	learn: 0.0779005	total: 835ms	remaining: 512ms
+327.4s 201 31:	learn: 0.0772436	total: 860ms	remaining: 484ms
+327.4s 202 32:	learn: 0.0757690	total: 883ms	remaining: 455ms
+327.4s 203 33:	learn: 0.0746980	total: 908ms	remaining: 427ms
+327.6s 204 34:	learn: 0.0727076	total: 932ms	remaining: 400ms
+327.6s 205 35:	learn: 0.0712284	total: 956ms	remaining: 372ms
+327.6s 206 36:	learn: 0.0706733	total: 980ms	remaining: 344ms
+327.6s 207 37:	learn: 0.0690819	total: 1s	remaining: 317ms
+327.6s 208 38:	learn: 0.0681029	total: 1.03s	remaining: 290ms
+327.6s 209 39:	learn: 0.0675473	total: 1.05s	remaining: 263ms
+327.6s 210 40:	learn: 0.0669346	total: 1.07s	remaining: 236ms
+327.6s 211 41:	learn: 0.0652364	total: 1.1s	remaining: 209ms
+327.6s 212 42:	learn: 0.0647867	total: 1.12s	remaining: 183ms
+327.9s 213 43:	learn: 0.0629052	total: 1.15s	remaining: 157ms
+327.9s 214 44:	learn: 0.0625841	total: 1.18s	remaining: 131ms
+327.9s 215 45:	learn: 0.0612448	total: 1.2s	remaining: 104ms
+327.9s 216 46:	learn: 0.0605262	total: 1.23s	remaining: 78.3ms
+327.9s 217 47:	learn: 0.0592416	total: 1.25s	remaining: 52.1ms
+327.9s 218 48:	learn: 0.0586667	total: 1.27s	remaining: 26ms
+327.9s 219 49:	learn: 0.0578365	total: 1.3s	remaining: 0us
+327.9s 220 [20.] [13.] [20.] [416.] [416.] [414.] [412.] [412.] [414.] [20.]
+329.5s 221 20 13 20 416 414 416 412 410 412 20
+330.3s 222 [20.] [13.] [20.] [416.] [416.] [414.] [412.] [412.] [414.] [20.]
+336.1s 223 В результате после EDA признака:= model, обработано признаков:= 21, осталось:= 2
+336.1s 224 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+336.1s 225 Кол-во строк в тесте:=  3837
+338.7s 226 В результате после EDA признака:= start_date, обработано признаков:= 22, осталось:= 1
+338.7s 227 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+338.7s 228 Кол-во строк в тесте:=  3837
+342.8s 229 В результате после EDA признака:= , обработано признаков:= 24, осталось:= -1
+342.8s 230 Кол-во строк в трейне:=  35801 . Убрали на данном шаге:=  0
+342.8s 231 Кол-во строк в тесте:=  3837
+359.3s 232 Мы добавили:559 dummies featuries
+364.4s 233 по тесту Стьюдента 188 признаков из 571 бинарных и dummies признаков НЕ СОДЕРЖАТ СТАТИСТИЧЕСКИ ЗНАЧИМЫХ РАЗЛИЧИЙ с таргетом
+364.4s 234 вот они:=  bodyType_седан 2 дв. brand_MINI engineDisplacement2_1300 engineDisplacement2_2500 engineDisplacement2_3400 engineDisplacement2_3900 engineDisplacement2_4200 engineDisplacement2_4900 engineDisplacement2_5300 engineDisplacement2_6600 model__1.0 model__103.0 model__104.0 model__105.0 model__109.0 model__112.0 model__113.0 model__114.0 model__115.0 model__116.0 model__118.0 model__119.0 model__12.0 model__120.0 model__122.0 model__123.0 model__124.0 model__128.0 model__13.0 model__132.0 model__133.0 model__136.0 model__139.0 model__14.0 model__140.0 model__141.0 model__142.0 model__143.0 model__148.0 model__150.0 model__151.0 model__157.0 model__158.0 model__16.0 model__160.0 model__164.0 model__165.0 model__166.0 model__169.0 model__170.0 model__172.0 model__176.0 model__179.0 model__18.0 model__19.0 model__193.0 model__195.0 model__196.0 model__198.0 model__199.0 model__2.0 model__204.0 model__205.0 model__214.0 model__215.0 model__216.0 model__218.0 model__220.0 model__221.0 model__223.0 model__224.0 model__229.0 model__230.0 model__231.0 model__233.0 model__234.0 model__236.0 model__238.0 model__240.0 model__241.0 model__242.0 model__244.0 model__245.0 model__256.0 model__257.0 model__260.0 model__262.0 model__264.0 model__265.0 model__269.0 model__273.0 model__276.0 model__278.0 model__279.0 model__280.0 model__282.0 model__283.0 model__287.0 model__291.0 model__292.0 model__296.0 model__298.0 model__305.0 model__306.0 model__307.0 model__317.0 model__319.0 model__321.0 model__322.0 model__326.0 model__327.0 model__328.0 model__329.0 model__33.0 model__330.0 model__333.0 model__335.0 model__337.0 model__34.0 model__343.0 model__345.0 model__348.0 model__35.0 model__351.0 model__353.0 model__355.0 model__356.0 model__357.0 model__361.0 model__362.0 model__363.0 model__365.0 model__367.0 model__368.0 model__37.0 model__370.0 model__380.0 model__381.0 model__387.0 model__388.0 model__389.0 model__39.0 model__392.0 model__393.0 model__396.0 model__399.0 model__40.0 model__402.0 model__403.0 model__408.0 model__409.0 model__421.0 model__427.0 model__429.0 model__430.0 model__434.0 model__437.0 model__438.0 model__439.0 model__440.0 model__441.0 model__47.0 model__5.0 model__56.0 model__57.0 model__58.0 model__6.0 model__60.0 model__61.0 model__63.0 model__64.0 model__66.0 model__68.0 model__69.0 model__70.0 model__73.0 model__76.0 model__77.0 model__78.0 model__80.0 model__83.0 model__87.0 model__89.0 model__9.0 model__91.0 model__93.0 model__96.0 model__98.0
+367.1s 235 всего моделей на проверку на удаление:= 178
+367.9s 236 2.0 245.0 7.0 6.0 13.0 15.0 20.0 23.0 27.0 30.0 209.0 210.0 246.0 247.0 248.0 249.0 250.0 410.0 411.0 412.0 413.0 414.0 415.0 416.0 417.0 418.0 439.0 440.0 441.0 442.0
+368.8s 237 model__2.0 model__245.0 model__7.0 model__6.0 model__13.0 model__15.0 model__20.0 model__23.0 model__27.0 model__30.0 model__209.0 model__210.0 model__246.0 model__247.0 model__248.0 model__249.0 model__250.0 model__410.0 model__411.0 model__412.0 model__413.0 model__414.0 model__415.0 model__416.0 model__417.0 model__418.0 model__439.0 model__440.0 model__441.0 model__442.0
+369.6s 238 всего удаляем моделей после проверки:= 171
+389.4s 239 Распределение fuelType в валидации:
+389.4s 240 fuelType_гибрид := 0.25 %
+389.4s 241 fuelType_дизель := 31.94 %
+389.4s 242 fuelType_бензин := 67.54 %
+389.4s 243 fuelType_электро := 0.25 %
+390.2s 244 Распределение fuelType в тесте:
+390.2s 245 fuelType_гибрид := 0.182 %
+390.2s 246 fuelType_дизель := 35.392 %
+390.2s 247 fuelType_бензин := 64.399 %
+390.2s 248 fuelType_электро := 0.026 %
+405.9s 249 [Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 4 concurrent workers.
+417.7s 250 [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:   11.8s
+433.4s 251 [Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   27.5s finished
+433.4s 252 [Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+433.4s 253 [Parallel(n_jobs=4)]: Done  42 tasks      | elapsed:    0.0s
+433.4s 254 [Parallel(n_jobs=4)]: Done 100 out of 100 | elapsed:    0.0s finished
+443.1s 255 [Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 4 concurrent workers.
+444.1s 256 [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:    0.9s
+445.2s 257 [Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    2.1s finished
+445.2s 258 [Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+445.2s 259 [Parallel(n_jobs=4)]: Done  42 tasks      | elapsed:    0.0s
+445.2s 260 [Parallel(n_jobs=4)]: Done 100 out of 100 | elapsed:    0.0s finished
+583.4s 261 [Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 4 concurrent workers.
+595.2s 262 [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:   11.8s
+611.0s 263 [Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   27.6s finished
+611.0s 264 [Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+611.0s 265 [Parallel(n_jobs=4)]: Done  42 tasks      | elapsed:    0.0s
+611.0s 266 [Parallel(n_jobs=4)]: Done 100 out of 100 | elapsed:    0.0s finished
+614.0s 267 0%|          | 0/2 [00:00<?, ?it/s][Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 4 concurrent workers.
+625.9s 268 [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:   11.9s
+641.4s 269 [Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   27.4s finished
+641.4s 270 [Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+641.4s 271 [Parallel(n_jobs=4)]: Done  42 tasks      | elapsed:    0.0s
+641.4s 272 [Parallel(n_jobs=4)]: Done 100 out of 100 | elapsed:    0.0s finished
+654.3s 273 50%|█████     | 1/2 [00:28<00:28, 28.57s/it]100%|██████████| 2/2 [00:40<00:00, 23.72s/it]100%|██████████| 2/2 [00:40<00:00, 20.49s/it]
+671.4s 274 0%|          | 0/2 [00:00<?, ?it/s][Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 4 concurrent workers.
+683.0s 275 [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:   11.7s
+698.4s 276 [Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   27.0s finished
+698.4s 277 [Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+698.4s 278 [Parallel(n_jobs=4)]: Done  42 tasks      | elapsed:    0.0s
+698.5s 279 [Parallel(n_jobs=4)]: Done 100 out of 100 | elapsed:    0.1s finished
+712.1s 280 50%|█████     | 1/2 [00:28<00:28, 28.21s/it]100%|██████████| 2/2 [00:41<00:00, 23.69s/it]100%|██████████| 2/2 [00:41<00:00, 20.69s/it]
+719.5s 281 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+722.3s 282 [NbConvertApp] Writing 8202040 bytes to __notebook__.ipynb
+722.9s 283 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+726.4s 284 [NbConvertApp] Support files will be in __results___files/
+726.4s 285 [NbConvertApp] Making directory __results___files
+726.4s 286 [NbConvertApp] Making directory __results___files
+726.4s 287 [NbConvertApp] Making directory __results___files
+726.4s 288 [NbConvertApp] Making directory __results___files
+726.4s 289 [NbConvertApp] Making directory __results___files
+726.4s 290 [NbConvertApp] Making directory __results___files
+726.4s 291 [NbConvertApp] Making directory __results___files
+726.4s 292 [NbConvertApp] Making directory __results___files
+726.4s 293 [NbConvertApp] Making directory __results___files
+726.4s 294 [NbConvertApp] Making directory __results___files
+726.4s 295 [NbConvertApp] Making directory __results___files
+726.4s 296 [NbConvertApp] Making directory __results___files
+726.4s 297 [NbConvertApp] Making directory __results___files
+726.4s 298 [NbConvertApp] Making directory __results___files
+726.4s 299 [NbConvertApp] Making directory __results___files
+726.4s 300 [NbConvertApp] Making directory __results___files
+726.4s 301 [NbConvertApp] Making directory __results___files
+726.4s 302 [NbConvertApp] Making directory __results___files
+726.4s 303 [NbConvertApp] Making directory __results___files
+726.4s 304 [NbConvertApp] Making directory __results___files
+726.4s 305 [NbConvertApp] Making directory __results___files
+726.4s 306 [NbConvertApp] Making directory __results___files
+726.4s 307 [NbConvertApp] Making directory __results___files
+726.4s 308 [NbConvertApp] Making directory __results___files
+726.4s 309 [NbConvertApp] Making directory __results___files
+726.4s 310 [NbConvertApp] Making directory __results___files
+726.4s 311 [NbConvertApp] Making directory __results___files
+726.4s 312 [NbConvertApp] Making directory __results___files
+726.4s 313 [NbConvertApp] Making directory __results___files
+726.4s 314 [NbConvertApp] Making directory __results___files
+726.4s 315 [NbConvertApp] Making directory __results___files
+726.4s 316 [NbConvertApp] Making directory __results___files
+726.4s 317 [NbConvertApp] Making directory __results___files
+726.4s 318 [NbConvertApp] Making directory __results___files
+726.4s 319 [NbConvertApp] Making directory __results___files
+726.4s 320 [NbConvertApp] Writing 5818571 bytes to __results__.html
